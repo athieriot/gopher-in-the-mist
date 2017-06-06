@@ -1,0 +1,20 @@
+// GUI
+https://developers.themoviedb.org/3/search/search-movies
+
+// API KEY
+043941d9826350a407cd88a648f2d62c
+
+// URL
+https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&query=wonder%20woman
+
+//  Encode Query params
+parameters := url.Values{}
+parameters.Add("api_key", apiKey)
+"?" + parameters.Encode()
+
+// Unmarshall
+res := ApplicationResponse{}
+	err = json.Unmarshal(body, &res)
+	if err != nil {
+		return nil, err
+	}

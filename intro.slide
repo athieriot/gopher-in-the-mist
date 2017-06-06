@@ -1,0 +1,159 @@
+Gopher in the mist
+An introduction to Go
+2 Jun 2017
+Tags: Go
+
+Aurelien Thieriot
+
+aurelien.thieriot@monitise.com
+
+@a_thieriot
+
+* What is Go
+
+- Go is a board game from ancient china...
+
+.image assets/goboard.png
+
+* Oh. The other Go !
+
+That one?
+
+.image assets/logo.jpg
+
+* Summary
+
+- From Google (In 2009)
+- C like syntax
+- Compiled (Fast)
+- Statically typed
+- Do not run on a Virtual Machine (Not even LLVM) (So it needs to be cross compiled)
+- Link statically external libraries (One binary to rule them all)
+- Garbage collected (Not generational)
+- Built-in concurrency features (via Goroutines)
+
+* Typical example
+
+.play -numbers -edit examples/0intro.go
+
+- Package / Imports
+- (No semi colons)
+
+* Let's write something
+
+To introduce nicely some of Go features, we'll write a small program that will search through a list of movies and display some details.
+This should show how to:
+
+- Work with variables
+- Call functions
+- Create objects
+- Define pointers
+- Loop through stuff
+- Use the standard lib (Such as methods on Strings)
+- If we got time, implementing interfaces
+- Hopefully implement a Goroutine
+
+* Step 1
+
+- Start with the simplest program
+- Get a search result and blindly print the body
+
+* Bits and bobs: Initialization
+
+.play -numbers examples/1init.go
+
+* Bits and bobs: Conditions and Functions
+
+.play -numbers examples/2iffunc.go
+
+* Idiom #1: Error Handling
+
+.play -numbers examples/3errorhandling.go
+
+* Live coding...
+
+* Step 2
+
+- It would be nice to Unmarshall that body into an object
+
+* Simple type system is simple
+
+- No generics, no Variance, covariance
+- No type hierarchy
+- Composition supported via "Embedding"
+
+- Define Struct + Interfaces (works like duck typing but checked at compile time)
+- Pointer syntax (To pass by reference instead of value when needed)
+
+- [P]ublic / [p]rivate via convention
+
+* Bits and bobs: Interfaces
+
+.play -numbers examples/4structinterface.go
+
+* Bits and bobs: Composition
+
+.play -numbers examples/5composition.go
+
+* Live coding...
+
+* Step 3
+
+* For and Ranges
+
+.play -numbers examples/20for.go
+
+- for on slices
+- Arrays, Maps (Not a functional language)
+
+* Error handling ++
+
+- Panic, Recover
+
+* Concurrency
+
+- Goroutine, channels
+- select
+
+* Standard lib
+
+- strings
+
+* Tooling
+
+- Out of the box tool chain (ex: Styling check at compile time, formatting, documentation)
+- Compiler fails when unused variable/import
+- go get (Download from SCM repos)
+- go test (file_test.go)
+
+* Who?
+
+- Docker
+- Google (Kubernetes)
+
+
+* Troubleshout / Quickstart
+
+- GOPATH
+
+* Comparison
+
+- Optimised for low latency, high throughput an acceptable trade off
+- (Talk about virtual memory?)
+
+* Links
+
+** Learning
+
+- https://tour.golang.org/basics/1
+- https://play.golang.org/
+
+** Doing
+
+- https://golang.org/doc/effective_go.html
+- https://github.com/avelino/awesome-go
+
+
+* Extra
+
+- new (allocate) / make (initialize)
