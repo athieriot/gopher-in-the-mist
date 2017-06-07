@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"net/url"
 	"encoding/json"
+	"os"
 )
 
 const apiKey = "043941d9826350a407cd88a648f2d62c"
@@ -69,7 +70,8 @@ func main() {
 	body, err := Search("Wonder woman")
 	if err != nil {
 		fmt.Println("An error occured", err.Error())
-	} else {
-		fmt.Println("The result is:", body)
+		os.Exit(1)
 	}
+
+	fmt.Println("The result is:", body)
 }

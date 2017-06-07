@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"encoding/json"
 	"time"
-	"sort"
+	"os"
 )
 
 const apiKey = "043941d9826350a407cd88a648f2d62c"
@@ -78,11 +78,12 @@ func main() {
 	result, err := Search("Wonder woman")
 	if err != nil {
 		fmt.Println("An error occured", err.Error())
-	} else {
-		fmt.Println("There is", result.TotalResults, "results")
-result.Iterate(func(v Movie) {
-			date, _ := time.Parse("2006-01-02", v.ReleaseDate)
-			fmt.Println(v.Title, "- Note: ", v.VoteAverage, "Released:", date.Year())
-		})
+		os.Exit(1)
 	}
+
+	fmt.Println("There is", result.TotalResults, "results")
+	result.Iterate(func(v Movie) {
+		date, _ := time.Parse("2006-01-02", v.ReleaseDate)
+		fmt.Println(v.Title, "- Note: ", v.VoteAverage, "Released:", date.Year())
+	})
 }
