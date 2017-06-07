@@ -1,11 +1,9 @@
 // GUI
 https://developers.themoviedb.org/3/search/search-movies
 
-// API KEY
-043941d9826350a407cd88a648f2d62c
-
 // URL
 https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&query=wonder%20woman
+https://api.themoviedb.org/3/movie/297762/credits?api_key=<<api_key>>
 
 //  Encode Query params
 parameters := url.Values{}
@@ -18,3 +16,36 @@ res := ApplicationResponse{}
 	if err != nil {
 		return nil, err
 	}
+
+// Use pointers
+
+// Time
+time.Parse("2006-01-02", v.ReleaseDate)
+https://stackoverflow.com/questions/14106541/go-parsing-date-time-strings-which-are-not-standard-formats#14106561
+
+// i to a !!!
+s := strconv.Itoa(-42)
+
+// Need to close the channel
+	var wg sync.WaitGroup
+    wg.Add(1)
+    wg.Done()
+
+    go func() {
+        wg.Wait()
+        close(casting)
+        done <- true
+    }()
+
+// Check time of run
+
+fmt.Println(time.Now().UnixNano() / 1000000)
+
+// Annnnd, wait for it :p
+// Otherwise this is too fast to loop parallel
+
+time.Sleep(10 * time.Millisecond)
+
+// Recursive test with cover
+
+go test -cover ./...

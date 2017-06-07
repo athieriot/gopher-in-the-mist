@@ -41,16 +41,16 @@ That one?
 
 * Let's write something
 
-To introduce nicely some of Go features, we'll write a small program that will search through a list of movies and display some details.
+To introduce nicely some of Go features, we'll a small program that will search through a list of movies and display some details
 This should show how to:
 
 - Work with variables
 - Call functions
-- Create objects
-- Define pointers
-- Loop through stuff
 - Use the standard lib (Such as methods on Strings)
-- If we got time, implementing interfaces
+- Create objects
+- Implementing interfaces
+- Using pointers
+- Loop through stuff
 - Hopefully implement a Goroutine
 
 * Step 1
@@ -60,17 +60,17 @@ This should show how to:
 
 * Bits and bobs: Initialization
 
-.play -numbers examples/1init.go
+.play -numbers -edit examples/1init.go
 
 * Bits and bobs: Conditions and Functions
 
-.play -numbers examples/2iffunc.go
+.play -numbers -edit examples/2iffunc.go
 
 * Idiom #1: Error Handling
 
-.play -numbers examples/3errorhandling.go
+.play -numbers -edit examples/3errorhandling.go
 
-* Live coding...
+* Coding...
 
 * Step 2
 
@@ -82,78 +82,83 @@ This should show how to:
 - No type hierarchy
 - Composition supported via "Embedding"
 
-- Define Struct + Interfaces (works like duck typing but checked at compile time)
+- Define Struct + Interfaces (Kind of relatable to duck typing)
 - Pointer syntax (To pass by reference instead of value when needed)
 
 - [P]ublic / [p]rivate via convention
 
 * Bits and bobs: Interfaces
 
-.play -numbers examples/4structinterface.go
+.play -numbers -edit examples/4structinterface.go
 
 * Bits and bobs: Composition
 
-.play -numbers examples/5composition.go
+.play -numbers -edit examples/5composition.go
 
-* Live coding...
+* Coding...
 
 * Step 3
 
-* For and Ranges
+- Wouldn't it be nice to display each Item individually?
+- We might want to pass a function as argument (Just because we can)
+- Maybe parsing the date as well?
 
-.play -numbers examples/20for.go
+* Bits and bobs: For and Ranges
 
-- for on slices
-- Arrays, Maps (Not a functional language)
+.play -numbers -edit examples/6for.go
 
-* Error handling ++
+* Coding...
 
-- Panic, Recover
+* Step 4
 
-* Concurrency
+- Now. Go have nice concurrency methods.
+- Should we try to get the Cast of each movie... Concurrently?
+- And we should probably start to split files
 
-- Goroutine, channels
-- select
+* Bits and bobs: The Goroutine
 
-* Standard lib
+.play -numbers -edit examples/7goroutine.go
 
-- strings
+* Bits and bobs: Channels
 
-* Tooling
+.play -numbers -edit examples/8channels.go
 
-- Out of the box tool chain (ex: Styling check at compile time, formatting, documentation)
-- Compiler fails when unused variable/import
+* Coding...
+
+* Step 5
+
+- Where are my tests?
+
+* Bits and bobs: Out of the box tool chain
+
+- go fmt (Style formatting)
+- go doc (Generate documentation site)
 - go get (Download from SCM repos)
-- go test (file_test.go)
+- go test (file_test.go, with coverage please)
 
-* Who?
+* Bits and bobs: Test library
 
-- Docker
-- Google (Kubernetes)
+.play -numbers -edit examples/9tests.go
 
-
-* Troubleshout / Quickstart
-
-- GOPATH
-
-* Comparison
-
-- Optimised for low latency, high throughput an acceptable trade off
-- (Talk about virtual memory?)
+* Coding...
 
 * Links
 
-** Learning
-
 - https://tour.golang.org/basics/1
 - https://play.golang.org/
-
-** Doing
-
+- https://gobyexample.com/channels
 - https://golang.org/doc/effective_go.html
 - https://github.com/avelino/awesome-go
-
+- https://rakyll.org/default-gopath/
 
 * Extra
 
+- GOPATH
+
+- select
+- Panic, Recover
 - new (allocate) / make (initialize)
+- Sort
+
+- Optimised for low latency, high throughput an acceptable trade off
+- (Talk about virtual memory?)
