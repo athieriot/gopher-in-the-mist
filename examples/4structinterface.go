@@ -12,9 +12,8 @@ type Booker interface {
 	hasInStock() bool 	// Private
 }
 
-func (b EBook) IsItGood() bool {
-	return b.Review > 5
-}
+func (b EBook) IsItGood() bool { return b.Review > 5 }
+func (b EBook) hasInStock() bool { return false }
 
 func main() {
 	lestat := EBook{}
@@ -22,4 +21,5 @@ func main() {
 	lestat.Review = 10
 
 	fmt.Println(lestat.IsItGood())
+	fmt.Println(Booker(lestat).hasInStock())
 }

@@ -18,3 +18,9 @@ res := ApplicationResponse{}
 	if err != nil {
 		return nil, err
 	}
+
+// Use pointers
+
+// Time
+time.Parse("2006-01-02", v.ReleaseDate)
+https://stackoverflow.com/questions/14106541/go-parsing-date-time-strings-which-are-not-standard-formats#14106561

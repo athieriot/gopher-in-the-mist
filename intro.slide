@@ -41,16 +41,16 @@ That one?
 
 * Let's write something
 
-To introduce nicely some of Go features, we'll write a small program that will search through a list of movies and display some details.
+To introduce nicely some of Go features, we'll a small program that will search through a list of movies and display some details
 This should show how to:
 
 - Work with variables
 - Call functions
-- Create objects
-- Define pointers
-- Loop through stuff
 - Use the standard lib (Such as methods on Strings)
-- If we got time, implementing interfaces
+- Create objects
+- Implementing interfaces
+- Using pointers
+- Loop through stuff
 - Hopefully implement a Goroutine
 
 * Step 1
@@ -70,7 +70,7 @@ This should show how to:
 
 .play -numbers examples/3errorhandling.go
 
-* Live coding...
+* Coding...
 
 * Step 2
 
@@ -82,7 +82,7 @@ This should show how to:
 - No type hierarchy
 - Composition supported via "Embedding"
 
-- Define Struct + Interfaces (works like duck typing but checked at compile time)
+- Define Struct + Interfaces (Kind of relatable to duck typing)
 - Pointer syntax (To pass by reference instead of value when needed)
 
 - [P]ublic / [p]rivate via convention
@@ -95,29 +95,29 @@ This should show how to:
 
 .play -numbers examples/5composition.go
 
-* Live coding...
+* Coding...
 
 * Step 3
 
-* For and Ranges
+- Wouldn't it be nice to display each Item individually?
+- We might want to pass a function as argument (Just because we can)
+- Maybe parsing the date as well?
 
-.play -numbers examples/20for.go
+* Bits and bobs: For and Ranges
 
-- for on slices
-- Arrays, Maps (Not a functional language)
+.play -numbers examples/6for.go
 
-* Error handling ++
+* Coding...
 
-- Panic, Recover
+* Step 4
 
-* Concurrency
+- Now Go have nice concurrency methods
+- Should we try to request the list of Actors of one movie... In parallel?
+
+* Bits and bobs: The Goroutine
 
 - Goroutine, channels
 - select
-
-* Standard lib
-
-- strings
 
 * Tooling
 
@@ -143,17 +143,13 @@ This should show how to:
 
 * Links
 
-** Learning
-
 - https://tour.golang.org/basics/1
 - https://play.golang.org/
-
-** Doing
-
 - https://golang.org/doc/effective_go.html
 - https://github.com/avelino/awesome-go
 
-
 * Extra
 
+- Panic, Recover
 - new (allocate) / make (initialize)
+- Sort
