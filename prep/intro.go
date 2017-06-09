@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 	"time"
-	"monitise.com/gopherinthemist/cli/api"
+	"monitise.com/gopherinthemist/prep/api"
 	"sync"
 )
 

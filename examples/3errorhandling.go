@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-func GetBody() (string, error) {
+func GetBody() ([]byte, error) {
 	client := &http.Client{}
 	// Our friend the Underscore ;) // HL
 	req, _ := http.NewRequest("GET", "http://api.com/", nil)
@@ -20,10 +20,10 @@ func GetBody() (string, error) {
 	defer resp.Body.Close()
 	body, _ := ioutil.ReadAll(resp.Body)
 
-	return string(body), nil
+	return body, nil
 }
 
 func main() {
 	body, _ := GetBody()
-	fmt.Println(body)
+	fmt.Println(string(body))
 }

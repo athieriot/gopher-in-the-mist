@@ -1,5 +1,15 @@
+// BEFORE STARTING !!!!
+
+- Start Recording
+- Start Present
+- Open TMDB tabs + API KEY
+- F11 on Firefox
+
+// BEFORE STARTING !!!!
+
 // GUI
 https://developers.themoviedb.org/3/search/search-movies
+https://developers.themoviedb.org/3/movies/get-movie-credits
 
 // URL
 https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&query=wonder%20woman

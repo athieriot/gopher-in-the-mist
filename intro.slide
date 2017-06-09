@@ -26,11 +26,12 @@ That one?
 - From Google (In 2009)
 - C like syntax
 - Compiled (Fast)
-- Statically typed
+- Statically typed (Weak type system)
 - Do not run on a Virtual Machine (Not even LLVM) (So it needs to be cross compiled)
 - Link statically external libraries (One binary to rule them all)
 - Garbage collected (Not generational)
 - Built-in concurrency features (via Goroutines)
+- General philosophy to keep things simple
 
 * Typical example
 
@@ -52,6 +53,7 @@ This should show how to:
 - Using pointers
 - Loop through stuff
 - Hopefully implement a Goroutine
+- (Or and don't forget my tests)
 
 * Step 1
 
